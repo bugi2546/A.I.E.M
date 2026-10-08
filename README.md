@@ -30,3 +30,20 @@
 1. End-to-End 데이터 파이프라인 경험
 2. 데이터 품질 관리(Data Quality)의 중요성 체득
 3. 웹 크롤링 도구 활용 역량 확보
+
+## 파일 구조
+
+```text
+.
+├── baseline.py                # PyTorch 커스텀 데이터셋 + AlexNet CNN 학습 베이스라인
+└── dataName_converter.ipynb   # 수집 이미지 파일명을 인덱스 형태(s0.jpg...)로 일괄 정규화하는 전처리 노트북
+```
+
+## 실행 방법
+
+```bash
+pip install torch torchvision pillow numpy
+python baseline.py
+```
+
+> 데이터셋은 저장소에 포함되어 있지 않습니다. 감정별 폴더 구조의 이미지 데이터를 준비한 뒤, `dataName_converter.ipynb`로 파일명을 정규화하고 `baseline.py` 내 데이터 경로를 본인 환경에 맞게 수정해 실행하세요.
